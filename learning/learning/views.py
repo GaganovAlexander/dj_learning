@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def root(request):
-    return render(request, 'root/index.html')
+    return render(request, 'root/index.html', {'Name': 'AlexanderGaganov'})
 
 def ex1_12(request):
     return render(request, 'task-3/ex1.1-12.html')
