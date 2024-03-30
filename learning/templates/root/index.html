@@ -5,35 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{Name}}</title>
-    <link rel="stylesheet" href="static/css/root/style.css">
+    <link rel="stylesheet" href="../static/css/root/style.css">
+    <style>
+        ul {
+            list-style-type: square;
+        }
+    </style>
 </head>
 
 <body>
     <header>Здесь ссылки на все дз</header>
     <div class="wrapper">
         <ol start="3">
-            <li>
-                Практикум
-            </li>
-            <ol>
+            <li>Практикум</li>
+            <ul>
                 <li>
-                    Задание
+                    <a href="https://web-programming.althgamer.ru/lists/task3/ex1-12">Задачи 1-12</a> <br>
                 </li>
-                <ul>
-                    <li>
-                        <a href="https://web-programming.althgamer.ru/lists/ex1-12">Задачи 1-12</a> <br>
-                    </li>
-                    <li>
-                        <a href="https://web-programming.althgamer.ru/lists/ex13">Задача 13</a> <br>
-                    </li>
-                    <li>
-                        <a href="https://web-programming.althgamer.ru/lists/ex14">Задача 14</a> <br>
-                    </li>
-                    <li>
-                        <a href="https://web-programming.althgamer.ru/lists/ex15">Задача 15</a>
-                    </li>
-                </ul>
-            </ol>
+                <li>
+                    <a href="https://web-programming.althgamer.ru/lists/task3/ex13">Задача 13</a> <br>
+                </li>
+                <li>
+                    <a href="https://web-programming.althgamer.ru/lists/task3/ex14">Задача 14</a> <br>
+                </li>
+                <li>
+                    <a href="https://web-programming.althgamer.ru/lists/task3/ex15">Задача 15</a>
+                </li>
+            </ul>
+            <li>Практикум</li>
+            <ul>
+                <li><a href="https://web-programming.althgamer.ru/lists/task4">Задачи 1-14</a></li>
+            </ul>
+            <li>Практикум</li>
+            <ul>
+                {%for task in tasks5%}
+                <li><a href="https://web-programming.althgamer.ru/lists/task5/ex{{task}}">Задача {{task}}</a></li>
+                {%endfor%}
+            </ul>
+            <li><a href="https://web-programming.althgamer.ru/lists">Практикум</a></li>
+            <li>Практикум</li>
+            <ul>
+                {%for task in tasks7%}
+                <li><a href="https://web-programming.althgamer.ru/lists/task7/ex{{task}}">Задача {{task}}</a></li>
+                {%endfor%}
+            </ul>
         </ol>
     </div>
 </body>

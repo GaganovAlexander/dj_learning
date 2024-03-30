@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+
+        p::before {
+            counter-increment: section;
+            content: 'Абзац - ' counter(section) '.';
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Django Rest Framework (DRF) - это библиотека, которая работает со стандартными моделями Django для создания
+        гибкого и мощного АРІ для проекта
+    </p>
+    <p>
+        Django CMS это современная платформа для веб-публикаций, построенная на Django, фреймворке веб-приложений «для
+        перфекционистов с соблюдением сроков»
+    </p>
+    <p>
+        ASGI (Asynchronous Server Gateway Interface) является духовным наследником WSGI, предназначенным для обеспечения
+        стандартного интерфейса между асинхронными веб-серверами, платформами и приложениями Python.
+    </p>
+    <p>
+        Python Social Auth это простой в настройке механигім социальной аутентификации/регистрации с поддержкой
+        нескольких платформ и провайдеров аутентификации.
+    </p>
+    <p>
+        Django Crispy Forms. Лучший способ получить Django DRY формы. Создавайте программные макеты многократного
+        использования из компонентов, имея полный контроль над отображаемым НТМІ. без записи НТМІ в шаблонах.
+    </p>
+</body>
+
+</html>

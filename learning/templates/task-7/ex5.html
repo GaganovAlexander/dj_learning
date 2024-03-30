@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            outline: 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        {% for row in sizes %}
+        <tr>
+            {% for column in sizes %}
+            <td>
+                <input type="text" placeholder="Текст" id="input-{{row}}-{{column}}">
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <script>
+        let inputList = document.getElementsByTagName('input')
+        let styleSheet = document.createElement("style")
+        let maxWidth = 300
+        let minWidth = 50
+        Array.from(inputList).map(i => {
+            styleSheet.innerText += `
+                #${i.id}:focus, #${i.id}:not(:placeholder-shown) {
+                    background-color: ${getRandomColor()};
+                    color: ${getRandomColor()};
+                    border-color: ${getRandomColor()};
+                    width: ${Math.floor(Math.random() * (maxWidth - minWidth + 1) + minWidth)}px;
+                }
+            `
+        })
+        document.head.appendChild(styleSheet)
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    </script>
+</body>
+
+</html>

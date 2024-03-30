@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul1 li:nth-child(odd) {
+            color: red;
+        }
+
+        #ul1 li:nth-child(even) {
+            color: yellow;
+        }
+
+
+        #ul2 li:nth-child(odd) {
+            color: blue;
+        }
+
+        #ul2 li:nth-child(even) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ul1">
+        {% for i in task10 %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+    <ul id="ul2">
+        {% for i in 'ABCDEFGHI' %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
