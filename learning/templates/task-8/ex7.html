@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            margin: 10px;
+            background-color: #ebebeb;
+            border-radius: 5px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: 'Segoe UI', sans-serif, 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+            border: 1px solid #D4D4D4;
+        }
+
+        .title {
+            font-size: 2em;
+            font-weight: 100;
+            color: #888888;
+            margin: 10px 0 -2px 0;
+        }
+
+        .select-menu {
+            border-top: 1px solid #E3E3E3;
+            border-bottom: 1px solid #E3E3E3;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .select-menu {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 5px;
+            display: flex;
+            flex-direction: row;
+
+
+            input {
+                display: none;
+            }
+
+            input+label {
+                position: relative;
+                padding-left: 25px;
+                cursor: pointer;
+                margin-right: 15px;
+                font-weight: normal;
+            }
+
+            input+label::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: none;
+                background-color: #4FC91C;
+            }
+
+            input:checked+label::before {
+                content: '\2713';
+                color: white;
+                background-color: #4FC91C;
+                text-align: center;
+                line-height: 18px;
+                font-size: 14px;
+            }
+        }
+
+        .field {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #999999;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            user-select: none;
+            border-right: 1px solid black;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 100%;
+            text-indent: 7px;
+            border: none;
+            text-decoration: none;
+            outline: none;
+            border: 0px solid transparent;
+        }
+
+        .agreement {
+            font-size: 0.67em;
+            text-align: center;
+        }
+
+        button {
+            width: 240px;
+            height: 30px;
+            background-color: #1c87c9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:active,
+        button:focus {
+            opacity: 0.66;
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        img {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <p class="title">Регистрация</p>
+        <div class="select-menu">
+            <div class="select-option">
+                <input type="radio" id="fiz-face" name="customer-type">
+                <label for="fiz-face">Физ.лицо</label>
+            </div>
+            <div class="select-option">
+                <input type="radio" id="company" name="customer-type">
+                <label for="company">Компания</label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="icon">
+                <img src="{% static 'img/email.png' %}" alt="">
+            </div>
+            <input type="text" placeholder="Почта">
+        </div>
+        <div class="field">
+            <div class="icon">
+                <img src="{% static 'img/user.png' %}" alt="">
+            </div>
+            <input type="text" placeholder="Имя">
+        </div>
+        <div class="field">
+            <div class="icon">
+                <img src="{% static 'img/padlock.png' %}" alt="">
+            </div>
+            <input type="text" placeholder="Пароль">
+        </div>
+        <div class="select-menu">
+            <div class="select-option">
+                <input type="radio" id="male" name="sex">
+                <label for="male">М</label>
+            </div>
+            <div class="select-option">
+                <input type="radio" id="female" name="sex">
+                <label for="female">Ж</label>
+            </div>
+        </div>
+        <p class="agreement">
+            <a href="#">
+                Отправляя, вы соглашаетесь с правилами на django.fun.
+            </a>
+        </p>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+
+</html>

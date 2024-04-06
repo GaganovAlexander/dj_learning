@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name {
+            font-weight: bold;
+        }
+
+        select,
+        fieldset,
+        .width-input {
+            width: 250px;
+        }
+
+        form>* {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="site-type" class="name">Тип сайта:</label><br>
+        <select name="site-type">
+            <option value="1">
+                Интернет магазин + Форум
+            </option>
+        </select><br>
+        <label for="level" class="name">Уровень специалиста</label><br>
+        <input type="radio" name="level" value="АС">
+        <label for="level">Junior</label>
+        <input type="radio" name="level" value="АРМ">
+        <label for="level">Middle</label>
+        <input type="radio" name="level" value="АРМ">
+        <label for="level">Senior</label><br>
+        <div>
+            <label for="extra-service" class="name">Дополнительные услуги</label><br>
+            <input type="checkbox" name="extra-service-1">
+            <label for="extra-service-1">Поисковая оптимизация</label><br>
+            <input type="checkbox" name="extra-service-2">
+            <label for="extra-service-2">Постраничная оптимизация</label><br>
+        </div>
+        <label for="date" class="name">Дата и время встречи с разработчиком:</label><br>
+        <input type="datetime-local" name="date" class="width-input">
+
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label for="firstname" class="name">Ваше имя:</label><br>
+            <input type="text" name="firstname" placeholder="введите ваше имя"><br><br>
+            <label for="phone" class="name">Ваш телефон:</label><br>
+            <input type="text" name="phone" placeholder="например, +7 800 123-45-67"><br>
+        </fieldset>
+        <input type="submit" value="Записаться" class="width-input">
+    </form>
+</body>
+
+</html>
