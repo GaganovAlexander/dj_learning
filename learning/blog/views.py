@@ -24,3 +24,6 @@ def index(request):
 
 def task7(request, ex_num):
     return render(request, f'task-7/ex{ex_num}.html', {'sizes': range(1, 4), 'color': "ff0000", 'task10': range(1, 11)})
+
+def task9(request, ex_num):
+    return render(request, f'task-9/ex{ex_num}.html')

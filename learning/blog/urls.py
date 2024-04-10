@@ -11,4 +11,5 @@ urlpatterns = [
     path('task5/ex<int:ex_num>', task5),
     path('', index),
     path('task7/ex<int:ex_num>', task7),
+    path('task9/ex<int:ex_num>', task9),
 ]

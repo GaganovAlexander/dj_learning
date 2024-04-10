@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --padding: 10px;
+            --main-height: calc(50px - var(--padding));
+        }
+
+        .div-table {
+            display: table;
+            width: 750px;
+        }
+
+        .table-row {
+            display: table-row;
+            width: 100%;
+            clear: both;
+        }
+
+        .table-col {
+            display: table-column;
+            float: left;
+            padding: var(--padding) 0 0 var(--padding);
+        }
+
+        #header {
+            width: calc(100% - var(--padding));
+            height: calc(var(--main-height) * 2);
+            background-color: #900000;
+        }
+
+        #menu {
+            width: calc(30% - var(--padding));
+            height: var(--main-height);
+            color: white;
+            background-color: #008080;
+        }
+
+        #content {
+            width: calc(70% - var(--padding));
+            height: var(--main-height);
+            background-color: #e0e0e0;
+        }
+
+        #bottom {
+            width: calc(100% - var(--padding));
+            height: var(--main-height);
+            color: white;
+            background-color: #444444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-table">
+        <div class="table-row">
+            <div class="table-col" id="header">верхняя панель</div>
+        </div>
+        <div class="table-row">
+            <div class="table-col" id="menu">меню</div>
+            <div class="table-col" id="content">контент</div>
+        </div>
+        <div class="table-row">
+            <div class="table-col" id="bottom">нижняя панель</div>
+        </div>
+    </div>
+</body>
+
+</html>

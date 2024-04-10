@@ -6,7 +6,8 @@ def root(request):
                   {'Name': 'AlexanderGaganov',
                    'tasks5': range(1, 11),
                    'tasks7': range(1, 11),
-                   'tasks8': range(1, 9)
+                   'tasks8': range(1, 9),
+                   'tasks9': range(1, 5),
                    })
 
 def task8(request, ex_num):
